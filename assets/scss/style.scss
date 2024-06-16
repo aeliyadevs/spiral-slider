@@ -1,4 +1,119 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+img {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  // border-radius: 50%;
+  // border: 6px solid rgb(71, 255, 255);
+}
+
+.wrapper {
+  width: 100%;
+  .spiral-slider {
+    height: 100vh;
+    // background: #a3fffd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    #center-point {
+      width: 1px;
+      height: 1px;
+      background: red;
+      position: absolute;
+      bottom: 0;
+    }
+    h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      margin-top: 50px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+    .semi-circle {
+      width: 180vh;
+      height: 180vh;
+      min-height: 180vh;
+      border-radius: 180vh;
+      // border: 10px solid white;
+      background: #f1ffac;
+      // overflow: hidden;
+      // display: flex;
+      // justify-content: center;
+      // gap: 20px;
+      // position: relative;
+      // .slide-item {
+      //   position: absolute;
+      //   z-index: 10;
+      // }
+      .slides {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        // .slide-item {
+        // animation: rotate 3s linear infinite;
+        // transform-origin: 845px 824px;
+        // position: absolute;
+        // }
+        // .item-visible-1 {
+        // transform: rotate(-55deg) translateX(200px) translateY(80px);
+        //   animation: rotate 3s linear infinite;
+        //   transform-origin: 845px 824px;
+        // }
+        // .item-visible-3 {
+        // transform: rotate(55deg) translateX(-200px) translateY(80px);
+        // animation: rotate 3s linear infinite;
+        //   transform-origin: 845px 824px;
+        // }
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#circle {
+  width: 1440px;
+  height: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  // border-top-left-radius: 100vh;
+  // border-top-right-radius: 100vh;
+  border-radius: 720px;
+  overflow: hidden;
+  gap: 10px;
+  position: relative;
+  .slide-item {
+    height: 720px;
+    overflow: hidden;
+    // background-color: #f1ffac;
+    position: absolute;
+    transform-origin: bottom center;
+    display: flex;
+    justify-content: center;
+    // &:first-child {
+    //   z-index: 10;
+    // }
+    img {
+      width: 1080px;
+      height: 680px;
+      object-fit: cover;
+    }
+  }
 }
