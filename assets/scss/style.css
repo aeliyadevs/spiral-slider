@@ -59,31 +59,46 @@ img {
   }
 }
 #circle {
-  width: 100%;
-  height: 200vh;
+  width: 1440px;
+  height: 1440px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  border-radius: 100vh;
+  border-radius: 720px;
   overflow: hidden;
   gap: 10px;
   position: relative;
 }
 #circle .slide-item {
   width: inherit;
-  height: 860px;
+  height: 720px;
   overflow: hidden;
   position: absolute;
   transform-origin: bottom center;
   display: flex;
   justify-content: center;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 49% 100%, 51% 100%);
-          clip-path: polygon(0% 0%, 100% 0%, 49% 100%, 51% 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 50% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 50% 100%);
   overflow: hidden;
+}
+#circle .slide-item::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  margin: auto;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: -100px;
+  z-index: 100;
+}
+#circle .slide-item:first-child {
+  -webkit-clip-path: polygon(-20% 0%, 120% 0%, 50% 100%, 50% 100%);
+          clip-path: polygon(-20% 0%, 120% 0%, 50% 100%, 50% 100%);
 }
 #circle .slide-item img {
   width: 100%;
-  height: 750px;
+  height: 700px;
   -o-object-fit: cover;
      object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
